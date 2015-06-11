@@ -4,7 +4,8 @@
   "description": "Unofficial Penneo JavaScript SDK",
   "main": "sample.js",
   "dependencies": {
-    "request": "^2.57.0"
+    "request": "^2.57.0",
+    "wsse": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {

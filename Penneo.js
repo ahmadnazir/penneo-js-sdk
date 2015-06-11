@@ -1,5 +1,5 @@
 var request = require('request');
-var Wsse = require('./Wsse.js'); // @todo: use npm module
+var Wsse = require('wsse');
 
 module.exports = function() {
 
