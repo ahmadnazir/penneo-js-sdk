@@ -1,8 +1,8 @@
 {
-  "name": "app",
-  "version": "1.0.0",
+  "name": "penneo-js-sdk",
+  "version": "0.0.1",
   "description": "Unofficial Penneo JavaScript SDK",
-  "main": "sample.js",
+  "main": "Penneo.js",
   "dependencies": {
     "request": "^2.57.0",
     "wsse": "^1.0.0"
