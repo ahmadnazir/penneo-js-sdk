@@ -1,4 +1,4 @@
-var request = require('request');
+var rp = require('request-promise');
 var Wsse = require('wsse');
 
 var endpoint;
@@ -27,26 +27,31 @@ function generateAuthHeader() {
 
 };
 
-function call(method, url) {
+function request(method, url, params) {
     checkInit();
     var options = {
-        url: endpoint + '/' + url,
+        method: method,
+        baseUrl: endpoint,
+        url: url,
         headers: generateAuthHeader()
     };
-    console.log(method + ': ' + endpoint + '/' + url);
 
-    request(options, function(error, response, body) {
-        if (error) {
-            log('Error :: ' + method + ' : ' + url + ",\n" + error);
-            return;
-        }
-        // console.log(response.statusCode);
-        // console.log(response.headers);
-        console.log(body);
-    });
+    if (method.toLowerCase === 'get') {
+        options.qs = params;
+    } else {
+        options.body = params;
+        options.json = true;
+    }
+    console.log(method + ': ' + endpoint + url);
+
+    return rp(options)
+        .then(function(response) {
+            console.log(response);
+            return response;
+        });
 };
 
 module.exports = {
     init: init,
-    request: call
+    request: request
 };

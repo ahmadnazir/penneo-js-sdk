@@ -1,10 +1,12 @@
 {
   "name": "penneo-js-sdk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Unofficial Penneo JavaScript SDK",
-  "main": "Penneo.js",
+  "main": "penneo.js",
   "dependencies": {
-    "request": "^2.57.0",
+    "jsonschema": "^1.2.4",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
     "wsse": "^1.0.0"
   },
   "devDependencies": {},
@@ -19,7 +21,7 @@
     "Penneo"
   ],
   "author": "Ahmad N. Raja",
-  "license": "AGPL",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ahmadnazir/penneo-js-sdk/issues"
   },
