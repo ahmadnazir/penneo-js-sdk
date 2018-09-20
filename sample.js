@@ -1,7 +1,5 @@
 var config = require('./config.json');
-var Penneo = require('./Penneo.js');
+var api = require('./api.js');
 
-var penneo = new Penneo();
-penneo.init(config.key, config.secret, config.endpoint);
-// penneo.request('GET', 'casefile/message/templates/default');
-penneo.request('GET', 'casefiles');
+api.init(config.endpoint, config.key, config.secret);
+api.request('GET', 'user');
